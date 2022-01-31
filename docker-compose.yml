@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  bot:
+    container_name: stakewise-bot
+    image: nnari/stakewise-bot:latest
+    restart: always
+    volumes:
+      - ./stakewise-bot-logs:/app/logs
+    env_file:
+      - .env
